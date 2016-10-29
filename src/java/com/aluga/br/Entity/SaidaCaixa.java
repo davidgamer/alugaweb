@@ -1,4 +1,5 @@
 
+package com.aluga.br.Entity;
 
 import java.io.Serializable;
 import java.sql.Date;

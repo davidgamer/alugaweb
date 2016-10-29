@@ -1,4 +1,4 @@
-
+package com.aluga.br.Entity;
 
 import com.aluga.br.Entity.Pessoa;
 import java.io.Serializable;
