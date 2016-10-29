@@ -1,5 +1,4 @@
-
-
+package com.aluga.br.Entity;
 
 import com.aluga.br.Entity.Pessoa;
 import java.io.Serializable;
@@ -14,28 +13,21 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
-
-
 @Entity
-@Table(name="propietario")
+@Table(name = "propietario")
 public class Propietario implements Serializable {
-	
-	
-	
-	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy =GenerationType.IDENTITY)
-	private Integer Idpropietario;
-	
-	@Column(name = "numImoveis", nullable = false)
-	private int numImoveis;
-	
-	
+    private static final long serialVersionUID = 1L;
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idPessoa")
-	private Pessoa pessoa;
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer Idpropietario;
+
+    @Column(name = "numImoveis", nullable = false)
+    private int numImoveis;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idPessoa")
+    private Pessoa pessoa;
+
 }
