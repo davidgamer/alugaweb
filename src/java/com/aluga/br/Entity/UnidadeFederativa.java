@@ -1,6 +1,5 @@
 package com.aluga.br.Entity;
 
-
 import javax.persistence.*;
 
 import java.io.Serializable;
