@@ -1,27 +1,24 @@
-
 package com.aluga.br.Entity;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.sql.Timestamp;
+
 import javax.persistence.*;
 
+@Entity
+public class SaidaCaixa implements Serializable {
 
-@Entity	
-public class SaidaCaixa implements Serializable{
+    private static final long serialVersionUID = 1L;
 
-	
-private static final long serialVersionUID = 1L;
-	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private  Integer IdsaidaCaixa;
+    private Integer IdsaidaCaixa;
 
     @Column(name = "valor", nullable = false)
-	private float valor;
-	
+    private float valor;
+
     @Temporal(TemporalType.DATE)
-	private Date dataEntrada;
+    private Date dataEntrada;
 
     public Integer getIdsaidaCaixa() {
         return IdsaidaCaixa;

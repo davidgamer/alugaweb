@@ -1,3 +1,5 @@
+package com.aluga.br.Entity;
+
 import java.io.Serializable;
 import javax.persistence.*;
 
@@ -11,6 +13,7 @@ public class CategoriaImovel implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer IdCategoria;
 
+    @Column(name = "descricao", nullable = false, length = 100)
     private String descricao;
 
     public Integer getIdCategoria() {
