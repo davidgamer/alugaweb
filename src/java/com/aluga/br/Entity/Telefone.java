@@ -5,7 +5,7 @@ import javax.persistence.*;
 
 
 @Entity
-
+@Table(name = "telefone")
 public class Telefone implements Serializable {
 
 	
@@ -15,17 +15,22 @@ public class Telefone implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer IdTelefone;
-	
+    
+        @Column(name ="numero", nullable = false)
 	private  Integer numero; 
+        
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "IdPessoa",nullable = false)
+        private Pessoa pessoa;
+        
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "IdCliente",nullable = false)
+        private Cliente cliente;
+        
+        
+        
 
-    public Integer getIdTelefone() {
-        return IdTelefone;
-    }
-
-    public void setIdTelefone(Integer IdTelefone) {
-        this.IdTelefone = IdTelefone;
-    }
-	
+  
 	
 
 	

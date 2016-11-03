@@ -4,6 +4,7 @@ package com.aluga.br.Entity;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,9 +13,10 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
 
 
 @Entity
@@ -80,6 +82,15 @@ public class Pessoa implements Serializable {
 	
 	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa",cascade = CascadeType.ALL)
 	private Propietario propietario;
+        
+        
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
+        private List<Telefone> telefones;
+        
+        
+        
+       
+        
 	
 	
 	
