@@ -6,7 +6,7 @@ import java.sql.Date;
 import javax.persistence.*;
 
 @Entity
-
+@Table(name = "entrada")
 public class EntradaCaixa implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,12 +20,8 @@ public class EntradaCaixa implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date dataEntrada;
 
-    public Integer getIdentradaCaixa() {
-        return IdentradaCaixa;
-    }
-
-    public void setIdentradaCaixa(Integer IdentradaCaixa) {
-        this.IdentradaCaixa = IdentradaCaixa;
-    }
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdCaixa", nullable = false)
+    private Caixa caixa;
 
 }

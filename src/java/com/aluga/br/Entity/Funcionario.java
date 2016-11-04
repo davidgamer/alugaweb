@@ -1,6 +1,5 @@
 package com.aluga.br.Entity;
 
-
 import com.aluga.br.Entity.Pessoa;
 import java.io.Serializable;
 import java.util.List;
@@ -12,40 +11,37 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name ="funcionario")
+@Table(name = "funcionario")
 public class Funcionario implements Serializable {
 
-	
-	
-	
-	private static final long serialVersionUID = 1L;
-	
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "Idfuncionaro", updatable = false, insertable = false, nullable = false)
-	private Integer Idfuncionaro;
-	
-	@Column(name = "salario", nullable = false)
-	private Double salario;
-	
-	@Column(name = "comissao", nullable = false)
-	private Double comissao;
+    private static final long serialVersionUID = 1L;
 
-	
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idPessoa")
-	private Pessoa pessoa;
-        
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
-        private List <Negociacao> negociacaos;
-        
-	
-	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "Idfuncionaro", updatable = false, insertable = false, nullable = false)
+    private Integer Idfuncionaro;
+
+    @Column(name = "salario", nullable = false)
+    private Double salario;
+
+    @Column(name = "comissao", nullable = false)
+    private Double comissao;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idPessoa")
+    private Pessoa pessoa;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
+    private List<Negociacao> negociacaos;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdCaixa", nullable = false)
+    private Caixa caixa;
+
 }
