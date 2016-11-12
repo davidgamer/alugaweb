@@ -1,9 +1,11 @@
 package com.aluga.br.Entity;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
+@Table(name="categoriaimovel")
 
 public class CategoriaImovel implements Serializable {
 
@@ -24,4 +26,7 @@ public class CategoriaImovel implements Serializable {
         this.IdCategoria = IdCategoria;
     }
 
+    
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
+    private List<Imovel> imovels;
 }

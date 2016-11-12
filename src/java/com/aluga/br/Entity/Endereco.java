@@ -6,6 +6,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
+@Table(name ="endereco")
 
 public class Endereco implements Serializable {
 
@@ -22,13 +23,14 @@ public class Endereco implements Serializable {
     private Integer numero;
     @Column(name = "cep", nullable = false)
     private Integer cep;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Iduf",nullable = false)
+    private UnidadeFederativa uf;
 
-    public Integer getIdEndereco() {
-        return IdEndereco;
-    }
-
-    public void setIdEndereco(Integer IdEndereco) {
-        this.IdEndereco = IdEndereco;
-    }
-
+  
+  
+    
+    
+    
 }
