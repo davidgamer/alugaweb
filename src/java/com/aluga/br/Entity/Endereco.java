@@ -28,6 +28,79 @@ public class Endereco implements Serializable {
     @JoinColumn(name = "Iduf",nullable = false)
     private UnidadeFederativa uf;
 
+    
+         @ManyToOne(fetch = FetchType.LAZY)
+         @JoinColumn(name = "IdImovel",nullable = false)
+         private Imovel imovel;
+         
+         
+         @ManyToOne(fetch = FetchType.LAZY)
+         @JoinColumn(name = "IdPessoa",nullable = false)
+         private Pessoa pessoa;
+
+    public Integer getIdEndereco() {
+        return IdEndereco;
+    }
+
+    public void setIdEndereco(Integer IdEndereco) {
+        this.IdEndereco = IdEndereco;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    public Integer getCep() {
+        return cep;
+    }
+
+    public void setCep(Integer cep) {
+        this.cep = cep;
+    }
+
+    public UnidadeFederativa getUf() {
+        return uf;
+    }
+
+    public void setUf(UnidadeFederativa uf) {
+        this.uf = uf;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
   
   
     

@@ -23,6 +23,30 @@ public class UnidadeFederativa  implements Serializable{
         
      @OneToMany(fetch = FetchType.LAZY,mappedBy = "endereco")
         private List<Endereco> enderecos;   
+
+    public Integer getIduf() {
+        return Iduf;
+    }
+
+    public void setIduf(Integer Iduf) {
+        this.Iduf = Iduf;
+    }
+
+    public String getNomeEstado() {
+        return nomeEstado;
+    }
+
+    public void setNomeEstado(String nomeEstado) {
+        this.nomeEstado = nomeEstado;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
    
 
 	

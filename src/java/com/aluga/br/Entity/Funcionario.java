@@ -44,4 +44,53 @@ public class Funcionario implements Serializable {
     @JoinColumn(name = "IdCaixa", nullable = false)
     private Caixa caixa;
 
+    public Integer getIdfuncionaro() {
+        return Idfuncionaro;
+    }
+
+    public void setIdfuncionaro(Integer Idfuncionaro) {
+        this.Idfuncionaro = Idfuncionaro;
+    }
+
+    public Double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(Double salario) {
+        this.salario = salario;
+    }
+
+    public Double getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(Double comissao) {
+        this.comissao = comissao;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public List<Negociacao> getNegociacaos() {
+        return negociacaos;
+    }
+
+    public void setNegociacaos(List<Negociacao> negociacaos) {
+        this.negociacaos = negociacaos;
+    }
+
+    public Caixa getCaixa() {
+        return caixa;
+    }
+
+    public void setCaixa(Caixa caixa) {
+        this.caixa = caixa;
+    }
+    
+
 }

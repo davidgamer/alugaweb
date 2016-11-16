@@ -35,6 +35,48 @@ public class Cliente implements Serializable {
         
         @OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
         private List<Negociacao> negociacoes;
+
+    public Integer getIdCliente() {
+        return IdCliente;
+    }
+
+    public void setIdCliente(Integer IdCliente) {
+        this.IdCliente = IdCliente;
+    }
+
+    public String getIntencao() {
+        return intencao;
+    }
+
+    public void setIntencao(String intencao) {
+        this.intencao = intencao;
+    }
+
+    public String getNomeTitular() {
+        return nomeTitular;
+    }
+
+    public void setNomeTitular(String nomeTitular) {
+        this.nomeTitular = nomeTitular;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
+
+    public List<Negociacao> getNegociacoes() {
+        return negociacoes;
+    }
+
+    public void setNegociacoes(List<Negociacao> negociacoes) {
+        this.negociacoes = negociacoes;
+    }
+        
+        
      
 
 }

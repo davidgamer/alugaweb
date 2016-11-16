@@ -35,4 +35,39 @@ public class Propietario implements Serializable {
     
     @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
     private List<Imovel> imovels;
+
+    public Integer getIdpropietario() {
+        return Idpropietario;
+    }
+
+    public void setIdpropietario(Integer Idpropietario) {
+        this.Idpropietario = Idpropietario;
+    }
+
+    public int getNumImoveis() {
+        return numImoveis;
+    }
+
+    public void setNumImoveis(int numImoveis) {
+        this.numImoveis = numImoveis;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public List<Imovel> getImovels() {
+        return imovels;
+    }
+
+    public void setImovels(List<Imovel> imovels) {
+        this.imovels = imovels;
+    }
+    
+    
+    
 }

@@ -24,4 +24,38 @@ public class EntradaCaixa implements Serializable {
     @JoinColumn(name = "IdCaixa", nullable = false)
     private Caixa caixa;
 
+    public Integer getIdentradaCaixa() {
+        return IdentradaCaixa;
+    }
+
+    public void setIdentradaCaixa(Integer IdentradaCaixa) {
+        this.IdentradaCaixa = IdentradaCaixa;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public Date getDataEntrada() {
+        return dataEntrada;
+    }
+
+    public void setDataEntrada(Date dataEntrada) {
+        this.dataEntrada = dataEntrada;
+    }
+
+    public Caixa getCaixa() {
+        return caixa;
+    }
+
+    public void setCaixa(Caixa caixa) {
+        this.caixa = caixa;
+    }
+    
+    
+
 }

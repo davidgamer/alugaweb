@@ -31,6 +31,46 @@ public class Caixa implements Serializable{
         
         @OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario")
         private List<Funcionario> funcionarios;
+
+    public Integer getIdCaixa() {
+        return IdCaixa;
+    }
+
+    public void setIdCaixa(Integer IdCaixa) {
+        this.IdCaixa = IdCaixa;
+    }
+
+    public Date getDataCaixa() {
+        return dataCaixa;
+    }
+
+    public void setDataCaixa(Date dataCaixa) {
+        this.dataCaixa = dataCaixa;
+    }
+
+    public List<SaidaCaixa> getSaidas() {
+        return saidas;
+    }
+
+    public void setSaidas(List<SaidaCaixa> saidas) {
+        this.saidas = saidas;
+    }
+
+    public List<EntradaCaixa> getEntradas() {
+        return entradas;
+    }
+
+    public void setEntradas(List<EntradaCaixa> entradas) {
+        this.entradas = entradas;
+    }
+
+    public List<Funcionario> getFuncionarios() {
+        return funcionarios;
+    }
+
+    public void setFuncionarios(List<Funcionario> funcionarios) {
+        this.funcionarios = funcionarios;
+    }
         
 	
 	

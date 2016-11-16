@@ -1,8 +1,5 @@
 package com.aluga.br.Entity;
 
-
-
-
 import java.io.Serializable;
 import java.util.List;
 
@@ -18,82 +15,115 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "pessoa")
 public class Pessoa implements Serializable {
 
-	
-	private static final long serialVersionUID = 1L;
-	
-	
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="IdPessoa",nullable=false)
-	private Integer IdPessoa;
-	
-	@Column(name="Nome",nullable=false,length = 80)
-	private String Nome;
-	
-	@Column(name="CPF",nullable=false)
-	private Integer Cpf;
-	
-	
-	
+    private static final long serialVersionUID = 1L;
 
-	public Integer getIdPessoa() {
-		return IdPessoa;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "IdPessoa", nullable = false)
+    private Integer IdPessoa;
 
-	public void setIdPessoa(Integer idPessoa) {
-		IdPessoa = idPessoa;
-	}
+    @Column(name = "Nome", nullable = false, length = 80)
+    private String Nome;
 
-	public String getNome() {
-		return Nome;
-	}
+    @Column(name = "CPF", nullable = false)
+    private Integer Cpf;
 
-	public void setNome(String nome) {
-		Nome = nome;
-	}
+    public Integer getIdPessoa() {
+        return IdPessoa;
+    }
 
-	public Integer getCpf() {
-		return Cpf;
-	}
+    public void setIdPessoa(Integer idPessoa) {
+        IdPessoa = idPessoa;
+    }
 
-	public void setCpf(Integer cpf) {
-		Cpf = cpf;
-	}
+    public String getNome() {
+        return Nome;
+    }
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
-	
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa",cascade = CascadeType.ALL)
-	private Usuario usuario;
-	
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa",cascade = CascadeType.ALL)
-	private Avalista avalista;
-	
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa",cascade = CascadeType.ALL)
-	private Funcionario funcionario;
-	
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa",cascade = CascadeType.ALL)
-	private Propietario propietario;
-        
-        
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
-        private List<Telefone> telefones;
-        
-        
-        
-       
-        
-	
-	
-	
-	
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public Integer getCpf() {
+        return Cpf;
+    }
+
+    public void setCpf(Integer cpf) {
+        Cpf = cpf;
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private Usuario usuario;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private Avalista avalista;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private Funcionario funcionario;
+
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    private Propietario propietario;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
+    private List<Telefone> telefones;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "endereco")
+    private List<Endereco> enderecos;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Avalista getAvalista() {
+        return avalista;
+    }
+
+    public void setAvalista(Avalista avalista) {
+        this.avalista = avalista;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public Propietario getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
 
 }

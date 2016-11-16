@@ -25,6 +25,30 @@ public class TipoNegociacao implements Serializable {
         @OneToMany(fetch = FetchType.LAZY, mappedBy = "tiponegociacao")
         private List<Negociacao> negociacaos;
 
+    public Integer getIdTipoNegociacao() {
+        return IdTipoNegociacao;
+    }
+
+    public void setIdTipoNegociacao(Integer IdTipoNegociacao) {
+        this.IdTipoNegociacao = IdTipoNegociacao;
+    }
+
+    public String getDescricaoTipo() {
+        return descricaoTipo;
+    }
+
+    public void setDescricaoTipo(String descricaoTipo) {
+        this.descricaoTipo = descricaoTipo;
+    }
+
+    public List<Negociacao> getNegociacaos() {
+        return negociacaos;
+    }
+
+    public void setNegociacaos(List<Negociacao> negociacaos) {
+        this.negociacaos = negociacaos;
+    }
+
    
 	
 	

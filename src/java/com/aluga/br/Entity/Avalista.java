@@ -25,4 +25,29 @@ public class Avalista implements Serializable {
 	@JoinColumn(name = "idPessoa")
 	private Pessoa pessoa;
 
+    public Integer getIdavalista() {
+        return Idavalista;
+    }
+
+    public void setIdavalista(Integer Idavalista) {
+        this.Idavalista = Idavalista;
+    }
+
+    public String getViablidade() {
+        return viablidade;
+    }
+
+    public void setViablidade(String viablidade) {
+        this.viablidade = viablidade;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+        
 }

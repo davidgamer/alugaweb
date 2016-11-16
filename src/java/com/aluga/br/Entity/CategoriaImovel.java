@@ -29,4 +29,22 @@ public class CategoriaImovel implements Serializable {
     
     @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
     private List<Imovel> imovels;
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public List<Imovel> getImovels() {
+        return imovels;
+    }
+
+    public void setImovels(List<Imovel> imovels) {
+        this.imovels = imovels;
+    }
+    
+    
 }

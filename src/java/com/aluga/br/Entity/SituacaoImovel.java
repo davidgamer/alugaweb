@@ -29,8 +29,27 @@ public class SituacaoImovel implements Serializable {
     
     @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
     private List<Imovel> imovels;
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+
+    public List<Imovel> getImovels() {
+        return imovels;
+    }
+
+    public void setImovels(List<Imovel> imovels) {
+        this.imovels = imovels;
+    }
 	
 	
 	
+    
+    
+    
 
 }

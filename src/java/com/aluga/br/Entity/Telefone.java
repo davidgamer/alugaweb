@@ -26,6 +26,38 @@ public class Telefone implements Serializable {
         @ManyToOne(fetch = FetchType.LAZY)
         @JoinColumn(name = "IdCliente",nullable = false)
         private Cliente cliente;
+
+    public Integer getIdTelefone() {
+        return IdTelefone;
+    }
+
+    public void setIdTelefone(Integer IdTelefone) {
+        this.IdTelefone = IdTelefone;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
         
         
         

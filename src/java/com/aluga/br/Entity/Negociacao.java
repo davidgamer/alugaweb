@@ -38,6 +38,65 @@ public class Negociacao implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IdImovel", nullable = false)
     private Imovel imovel;
+
+    public Integer getIdNegocio() {
+        return IdNegocio;
+    }
+
+    public void setIdNegocio(Integer IdNegocio) {
+        this.IdNegocio = IdNegocio;
+    }
+
+    public float getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(float valorTotal) {
+        this.valorTotal = valorTotal;
+    }
+
+    public Date getDataRealizacao() {
+        return dataRealizacao;
+    }
+
+    public void setDataRealizacao(Date dataRealizacao) {
+        this.dataRealizacao = dataRealizacao;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public TipoNegociacao getTipoNegociacao() {
+        return tipoNegociacao;
+    }
+
+    public void setTipoNegociacao(TipoNegociacao tipoNegociacao) {
+        this.tipoNegociacao = tipoNegociacao;
+    }
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public Imovel getImovel() {
+        return imovel;
+    }
+
+    public void setImovel(Imovel imovel) {
+        this.imovel = imovel;
+    }
     
 
+    
+    
+    
 }
