@@ -22,7 +22,7 @@ public class TipoNegociacao implements Serializable {
 	private String descricaoTipo;
         
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "tiponegociacao")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "TipoNegociacao")
         private List<Negociacao> negociacaos;
 
     public Integer getIdTipoNegociacao() {

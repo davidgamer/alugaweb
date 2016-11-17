@@ -72,7 +72,7 @@ public class Pessoa implements Serializable {
     @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
     private Propietario propietario;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
     private List<Telefone> telefones;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")

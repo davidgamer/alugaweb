@@ -28,7 +28,7 @@ public class SituacaoImovel implements Serializable {
         this.IdSituacao = IdSituacao;
     }
     
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "stimovel")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "SituacaoImovel")
     private List<Imovel> imovels;
    
     public String getSituacao() {
