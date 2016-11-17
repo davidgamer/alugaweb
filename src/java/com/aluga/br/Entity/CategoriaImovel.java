@@ -27,7 +27,7 @@ public class CategoriaImovel implements Serializable {
     }
 
     
-    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "categoriaimovel")
     private List<Imovel> imovels;
 
     public String getDescricao() {

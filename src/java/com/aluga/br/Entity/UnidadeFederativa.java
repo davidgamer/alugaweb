@@ -21,7 +21,7 @@ public class UnidadeFederativa  implements Serializable{
         @Column(name =  "nomeEstado", length = 40)
 	private String nomeEstado;
         
-     @OneToMany(fetch = FetchType.LAZY,mappedBy = "endereco")
+     @OneToMany(fetch = FetchType.LAZY,mappedBy = "uf")
         private List<Endereco> enderecos;   
 
     public Integer getIduf() {

@@ -1,7 +1,8 @@
 package com.aluga.br.Entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
+
 
 import javax.persistence.*;
 

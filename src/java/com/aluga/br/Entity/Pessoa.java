@@ -75,7 +75,7 @@ public class Pessoa implements Serializable {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
     private List<Telefone> telefones;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "endereco")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
     private List<Endereco> enderecos;
 
     public Usuario getUsuario() {

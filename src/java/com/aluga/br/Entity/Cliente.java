@@ -30,10 +30,10 @@ public class Cliente implements Serializable {
     private String nomeTitular;
 
      
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "telefone")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
         private List<Telefone> telefones;
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
         private List<Negociacao> negociacoes;
 
     public Integer getIdCliente() {

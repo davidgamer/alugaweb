@@ -37,7 +37,7 @@ public class Funcionario implements Serializable {
     @JoinColumn(name = "idPessoa")
     private Pessoa pessoa;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario")
     private List<Negociacao> negociacaos;
 
     @ManyToOne(fetch = FetchType.LAZY)

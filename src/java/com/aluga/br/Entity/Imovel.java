@@ -2,53 +2,61 @@ package com.aluga.br.Entity;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.faces.view.StateManagementStrategy;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "imovel")
 public class Imovel implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer IdImovel;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer IdImovel;
 
-	@Column(name = "valor", nullable = false)
-	private float valor;
-        
-	@Column(name = "area", nullable = false)
-	private float area;
-        
-	@Column(name = "areaconstruida", nullable = false)
-	private float areaConstruida;
-        
-        @Column(name = "numComodos", nullable = true)
-        private Integer numComodos;
-        
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "negociacao")
-        private List<Negociacao> negociacaos;
-        
-        @ManyToOne(fetch = FetchType.LAZY)
-        @JoinColumn(name = "IdCategoria",nullable = false)
-        private CategoriaImovel categoriaImovel;
-        
+    @Column(name = "valor", nullable = false)
+    private float valor;
+
+    @Column(name = "area", nullable = false)
+    private float area;
+
+    @Column(name = "areaconstruida", nullable = false)
+    private float areaConstruida;
+
+    @Column(name = "numComodos", nullable = true)
+    private Integer numComodos;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "imovel")
+    private List<Negociacao> negociacaos;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdCategoria", nullable = false)
+    private CategoriaImovel categoriaImovel;
+
          @ManyToOne(fetch = FetchType.LAZY)
          @JoinColumn(name = "IdSituacao",nullable = false)
          private SituacaoImovel situacaoImovel;
-         
-         
-          @ManyToOne(fetch = FetchType.LAZY)
-         @JoinColumn(name = "Idpropietario",nullable = false)
-         private Propietario propietario;
-          
-         @ManyToOne(fetch = FetchType.LAZY)
-         @JoinColumn(name = "IdComodo",nullable = false)
-         private Comodo comodo;
-          
-         @OneToMany(fetch = FetchType.LAZY , mappedBy = "endereco")
-         private List<Endereco> enderecos;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "Idpropietario", nullable = false)
+    private Propietario propietario;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdComodo", nullable = false)
+    private Comodo comodo;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "imovel")
+    private List<Endereco> enderecos;
+
+    public SituacaoImovel getSituacaoImovel() {
+        return situacaoImovel;
+    }
+
+    public void setSituacaoImovel(SituacaoImovel situacaoImovel) {
+        this.situacaoImovel = situacaoImovel;
+    }
+
+   
 
     public Integer getIdImovel() {
         return IdImovel;
@@ -106,14 +114,6 @@ public class Imovel implements Serializable {
         this.categoriaImovel = categoriaImovel;
     }
 
-    public SituacaoImovel getSituacaoImovel() {
-        return situacaoImovel;
-    }
-
-    public void setSituacaoImovel(SituacaoImovel situacaoImovel) {
-        this.situacaoImovel = situacaoImovel;
-    }
-
     public Propietario getPropietario() {
         return propietario;
     }
@@ -137,11 +137,5 @@ public class Imovel implements Serializable {
     public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
-          
-          
-         
-         
-       
-        
 
 }

@@ -17,7 +17,7 @@ public class Comodo implements Serializable {
     @Column(name = "descricao", nullable = false, length = 100)
     private String descricao;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "imovel")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "comodo")
     private List<Imovel> imovels;
 
     public Integer getIdComodo() {

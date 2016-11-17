@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "situacaoimovel")
 
 public class SituacaoImovel implements Serializable {
 
@@ -14,10 +15,10 @@ public class SituacaoImovel implements Serializable {
 	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer IdSituacao;
+    private Integer IdSituacao;
 	
-	@Column(name = "situacao", nullable = false, length = 100)
-	private String situacao;
+    @Column(name = "situacao", nullable = false, length = 100)
+    private String situacao;
 
     public Integer getIdSituacao() {
         return IdSituacao;
@@ -27,9 +28,9 @@ public class SituacaoImovel implements Serializable {
         this.IdSituacao = IdSituacao;
     }
     
-    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "situacaoimovel")
     private List<Imovel> imovels;
-
+   
     public String getSituacao() {
         return situacao;
     }
@@ -38,13 +39,9 @@ public class SituacaoImovel implements Serializable {
         this.situacao = situacao;
     }
 
-    public List<Imovel> getImovels() {
-        return imovels;
-    }
+  
 
-    public void setImovels(List<Imovel> imovels) {
-        this.imovels = imovels;
-    }
+   
 	
 	
 	

@@ -33,7 +33,7 @@ public class Propietario implements Serializable {
     private Pessoa pessoa;
     
     
-    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "imovel")
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "propietario")
     private List<Imovel> imovels;
 
     public Integer getIdpropietario() {

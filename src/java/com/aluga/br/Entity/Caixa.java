@@ -3,7 +3,7 @@ package com.aluga.br.Entity;
 
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 
@@ -22,14 +22,14 @@ public class Caixa implements Serializable{
         @Temporal(TemporalType.DATE)
 	private Date dataCaixa;
         
-        @OneToMany(fetch = FetchType.LAZY , mappedBy = "saida")
+        @OneToMany(fetch = FetchType.LAZY , mappedBy = "caixa")
         private List<SaidaCaixa> saidas;
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "entrada")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "caixa")
         private List<EntradaCaixa> entradas;
         
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "caixa")
         private List<Funcionario> funcionarios;
 
     public Integer getIdCaixa() {
