@@ -33,9 +33,9 @@ public class Imovel implements Serializable {
     @JoinColumn(name = "IdCategoria", nullable = false)
     private CategoriaImovel categoriaImovel;
 
-         @ManyToOne(fetch = FetchType.LAZY)
-         @JoinColumn(name = "IdSituacao",nullable = false)
-         private SituacaoImovel situacaoImovel;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IdSituacao",nullable = false)
+    private SituacaoImovel situacaoImovel;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Idpropietario", nullable = false)
