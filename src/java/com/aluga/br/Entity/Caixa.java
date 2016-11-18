@@ -8,7 +8,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "caixa")
+
 public class Caixa implements Serializable{
 
 	
@@ -22,14 +22,14 @@ public class Caixa implements Serializable{
         @Temporal(TemporalType.DATE)
 	private Date dataCaixa;
         
-        @OneToMany(fetch = FetchType.LAZY , mappedBy = "caixa")
+        @OneToMany(fetch = FetchType.LAZY , mappedBy = "Caixa")
         private List<SaidaCaixa> saidas;
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "caixa")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "Caixa")
         private List<EntradaCaixa> entradas;
         
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "caixa")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "Caixa")
         private List<Funcionario> funcionarios;
 
     public Integer getIdCaixa() {

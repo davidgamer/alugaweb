@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
-@Table(name="uf")
+
 
 public class UnidadeFederativa  implements Serializable{
 
@@ -21,7 +21,7 @@ public class UnidadeFederativa  implements Serializable{
         @Column(name =  "nomeEstado", length = 40)
 	private String nomeEstado;
         
-     @OneToMany(fetch = FetchType.LAZY,mappedBy = "uf")
+     @OneToMany(fetch = FetchType.LAZY,mappedBy = "UnidadeFederativa")
         private List<Endereco> enderecos;   
 
     public Integer getIduf() {

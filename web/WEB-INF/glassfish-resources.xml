@@ -14,4 +14,5 @@
     <jdbc-resource enabled="true" jndi-name="java:app/mysql/alugaweb" object-type="user" pool-name="mysql_alugaweb_rootPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/alugaweb" object-type="user" pool-name="mysql_alugaweb_rootPool"/>
     <jdbc-resource enabled="true" jndi-name="java:app/alugaweb" object-type="user" pool-name="mysql_alugaweb_rootPool"/>
+    <jdbc-resource enabled="true" jndi-name="java:app/javaweb" object-type="user" pool-name="mysql_alugaweb_rootPool"/>
 </resources>

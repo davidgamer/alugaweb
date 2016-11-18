@@ -16,14 +16,14 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "pessoa")
+
 public class Pessoa implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdPessoa", nullable = false)
+   
     private Integer IdPessoa;
 
     @Column(name = "Nome", nullable = false, length = 80)
@@ -60,22 +60,22 @@ public class Pessoa implements Serializable {
         return serialVersionUID;
     }
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Pessoa", cascade = CascadeType.ALL)
     private Usuario usuario;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Pessoa", cascade = CascadeType.ALL)
     private Avalista avalista;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Pessoa", cascade = CascadeType.ALL)
     private Funcionario funcionario;
 
-    @OneToOne(fetch = FetchType.LAZY, mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, mappedBy = "Pessoa", cascade = CascadeType.ALL)
     private Propietario propietario;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Pessoa")
     private List<Telefone> telefones;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "pessoa")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Pessoa")
     private List<Endereco> enderecos;
 
     public Usuario getUsuario() {

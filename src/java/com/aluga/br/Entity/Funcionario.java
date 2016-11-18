@@ -14,17 +14,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
+
 
 @Entity
-@Table(name = "funcionario")
+
 public class Funcionario implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Idfuncionaro", updatable = false, insertable = false, nullable = false)
     private Integer Idfuncionaro;
 
     @Column(name = "salario", nullable = false)
@@ -37,7 +36,7 @@ public class Funcionario implements Serializable {
     @JoinColumn(name = "idPessoa")
     private Pessoa pessoa;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Funcionario")
     private List<Negociacao> negociacaos;
 
     @ManyToOne(fetch = FetchType.LAZY)

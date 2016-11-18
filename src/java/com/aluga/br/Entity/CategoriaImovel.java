@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name="categoriaimovel")
+
 
 public class CategoriaImovel implements Serializable {
 

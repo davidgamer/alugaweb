@@ -16,7 +16,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "propietario")
+
 public class Propietario implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class Propietario implements Serializable {
     private Pessoa pessoa;
     
     
-    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "propietario")
+    @OneToMany(fetch =  FetchType.LAZY, mappedBy = "Propietario")
     private List<Imovel> imovels;
 
     public Integer getIdpropietario() {

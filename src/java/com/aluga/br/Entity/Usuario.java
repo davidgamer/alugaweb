@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="usuario")
+
 
 public class Usuario implements Serializable {
 
@@ -22,7 +22,6 @@ public class Usuario implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Idusuario", updatable = false, insertable = false, nullable = false)
 	private Integer Idusuario;
 
 	@Column(name = "login", nullable = false, length = 50)

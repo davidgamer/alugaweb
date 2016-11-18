@@ -5,7 +5,7 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "comodo")
+
 public class Comodo implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -17,7 +17,7 @@ public class Comodo implements Serializable {
     @Column(name = "descricao", nullable = false, length = 100)
     private String descricao;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "comodo")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Comodo")
     private List<Imovel> imovels;
 
     public Integer getIdComodo() {

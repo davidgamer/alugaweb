@@ -6,7 +6,7 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-@Table(name ="endereco")
+
 
 public class Endereco implements Serializable {
 

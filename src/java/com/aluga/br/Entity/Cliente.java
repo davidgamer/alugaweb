@@ -14,7 +14,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cliente")
 public class Cliente implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,10 +29,10 @@ public class Cliente implements Serializable {
     private String nomeTitular;
 
      
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "Cliente")
         private List<Telefone> telefones;
         
-        @OneToMany(fetch = FetchType.LAZY, mappedBy = "cliente")
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "Cliente")
         private List<Negociacao> negociacoes;
 
     public Integer getIdCliente() {

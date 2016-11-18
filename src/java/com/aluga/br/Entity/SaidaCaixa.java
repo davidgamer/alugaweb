@@ -7,7 +7,7 @@ import java.util.Date;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "saida")
+
 public class SaidaCaixa implements Serializable {
 
     private static final long serialVersionUID = 1L;
